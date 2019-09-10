@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Renan Henrique | Portfólio</title>
+</head>
+<body>
+    <div id="enterPage-container">
+        <div class="profile-container">
+            <img src="images/face.png" class="face-img" />
+            <span class="title">Renan Henrique</span>
+            <span class="sub-title">Desenvolvedor Web | Nova Friburgo</span>
+
+            <button class="continue-btn" onclick="openMainPage()">Ver Portfólio</button>
+        </div>
+
+    </div>
+
+    <div id="mainPage-container">
+        <div class="side-menu">
+                <div class="menuprofile-container">
+                        <img src="images/face.png" class="face-img" />
+                        <span class="title">Renan Henrique</span>
+                        <span class="sub-title">Desenvolvedor Web | Nova Friburgo</span>
+                </div>
+                <hr>
+                <div class="contact">
+                    <span class="sub-title">Informações de Contato</span>
+                    <hr>
+                    <ul>
+                        <li>
+                            nan.pp@hotmail.com
+                        <li>
+                            <a target="_blank" href="">Linkedin</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="">Github</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="menus">
+                    <span class="sub-title">Menu</span>
+                    <hr>
+                    <ul>
+                        <li>
+                            <a onclick="openMainPage()">Sobre</a>
+                        </li>
+                        <li>
+                            <a onclick="openProjectsPage()">Meus projetos</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div id="content-container">
+            <h1>Olá, eu me chamo <strong>Renan Henrique</strong>. Sou um desenvolvedor web, pronto para solucionar os seus problemas.</h1>
+            
+            <p>Tenho 19 anos, nascido e crescido no Rio de Janeiro, em Cabo Frio, vim para Nova Friburgo em 2019 para estudar minha graduação.</p>
+            <p>Eu conheci a programação com 11 anos. Desde então comecei a brincar um pouco, criava pequenas coisinhas até me apaixonar pelo poder que a programação permite. Foi com 17 anos que descobri que isso poderia fazer parte da minha vida.</p>
+            <p>Desde então procuro aprimorar meus conhecimentos com tecnologias de mercado, e entrei para a graduação em <strong>Sistemas de Informação</strong> pela CEFET/RJ-NF.</strong></p>
+            <hr>
+            <h1>Habilidades</h1>
+
+            <div class="skills">
+                <ul>
+                    <li>
+                        <img src="images/html5.png" alt="HTML5">
+                    </li>
+                    <li>
+                        <img src="images/css3.png" alt="CSS3">
+                    </li>
+                    <li>
+                        <img src="images/js.png" alt="Javascript">
+                    </li>
+                    <li>
+                        <img src="images/nodejs.png" alt="NodeJS">
+                    </li>
+                    <li>
+                        <img src="images/react.png" alt="React & React-Native">
+                    </li>
+                    <li>
+                        <img src="images/github.png" alt="Github">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects-container">
+                <h1>Meus Projetos</h1>
+
+                <div class="cards">
+                    <a class="card-a" target="_blank" href="https://github.com/Renanh3l/devbox-frontend"><div class="card">
+                        <img src="images/proj1.png" alt="Devbox">
+                        <div class="card-container">
+                            <h4><b>Devbox</b></h4>
+                            <p>Projeto de upload de arquivos, um simples clone baseado no Dropbox. Feito para estudo com ajuda da Rocketseat. Usei as tecnologias NodeJS no backend e React no Frontend. Também foi feita uma versão mobile, utilizando React Native.</p>
+                        </div>
+                    </div></a>
+
+                    <a class="card-a" target="_blank" href="https://github.com/Renanh3l/Fullstack-InstagramClone"><div class="card">
+                            <img src="images/proj2.png" alt="Instagram Clone">
+                            <div class="card-container">
+                                <h4><b>Instagram Clone</b></h4>
+                                <p>Um simples clone do instagram feito para estudos. Foram utilizados React para Frontend, NodeJS no backend e também foi feita uma versão mobile usando React Native. Todas sincronizadas e com atualizações em tempo real usando Socket.IO.</p>
+                            </div>
+                    </div></a>
+
+                    <a class="card-a" target="_blank" href="https://github.com/Renanh3l/Google-Clone"><div class="card">
+                            <img src="images/proj3.png" alt="Google Clone">
+                            <div class="card-container">
+                                <h4><b>Google Clone</b></h4>
+                                <p>Clone da página inicial do google com HTML, CSS, JS e lib FontAwesome para pequenos ícones. Sem demais funcionamentos, apenas o frontend foi desenvolvido.</p>
+                            </div>
+                    </div></a>
+                </div>
+        </div>
+
+    </div>
+
+    <!-- Footer sempre visível -->
+    <footer class="page-footer">
+        <span class="footer-text"><a target="_blank" href="https://github.com/Renanh3l">github.com/renanh3l</a></span>
+    </footer>
+
+    <script>
+        function openMainPage() {
+            document.getElementById("enterPage-container").style.display = "none";
+            document.getElementById("projects-container").style.display = "none";
+            document.getElementById("mainPage-container").style.display = "flex";
+            document.getElementById("content-container").style.display = "block"
+        }
+
+        function openProjectsPage() {
+            document.getElementById("content-container").style.display = "none";
+            document.getElementById("projects-container").style.display = "flex";
+        }
+    </script>
+
+</body>
+</html>
